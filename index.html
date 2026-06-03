@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSearch — 像 Spotlight 一样搜索你忘记的图片</title>
+  <meta name="description" content="iSearch (AI搜图) 是一款 macOS 本地图片搜索工具，通过 OCR 技术让你用关键词快速找回曾经保存但忘记位置的截图、小票、发票等图片。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="text-white font-semibold text-lg">iSearch</span>
+      <div class="flex items-center gap-6 text-sm text-slate-300">
+        <a href="#intro" data-zh="介绍" data-en="Features" class="hover:text-white transition"></a>
+        <a href="#usage" data-zh="使用说明" data-en="Guide" class="hover:text-white transition"></a>
+        <a href="#download" data-zh="下载" data-en="Download" class="hover:text-white transition"></a>
+        <a href="#feedback" data-zh="反馈" data-en="Feedback" class="hover:text-white transition"></a>
+        <!-- Language toggle -->
+        <button id="lang-toggle" class="ml-2 px-2 py-1 rounded text-xs font-medium border border-slate-600 hover:border-slate-400 transition">
+          <span data-zh="EN" data-en="中文"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient min-h-screen flex items-center justify-center pt-14">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6" data-zh="像 Spotlight 一样<br>搜索你忘记的图片" data-en="Search Forgotten Images<br>Like Spotlight"></h1>
+      <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto" data-zh="iSearch 是一款 macOS 本地工具，通过 OCR 索引你电脑中的截图、小票、发票等图片，让你用关键词快速找回它们。" data-en="A native macOS tool that indexes your screenshots, receipts, and invoices with OCR, so you can find them instantly with keywords."></p>
+      <a href="#download"
+         class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg text-lg transition"
+         data-zh="免费下载" data-en="Download Free"></a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section id="intro" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-14" data-zh="它能做什么？" data-en="What Can It Do?"></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2" data-zh="关键词搜索" data-en="Keyword Search"></h3>
+          <p class="text-slate-600" data-zh="输入商户名、地点、金额等关键词，即可搜索到你电脑中的截图、小票、发票等图片内容。" data-en="Enter merchant names, locations, amounts or any keyword to search through your screenshots, receipts, and invoices."></p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2" data-zh="闪电索引" data-en="Lightning Index"></h3>
+          <p class="text-slate-600" data-zh="基于 macOS Vision Framework 进行 OCR 识别，搜索响应在 1 秒以内，无需等待。" data-en="Powered by macOS Vision Framework for OCR. Search results appear in under 1 second."></p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2" data-zh="完全本地" data-en="Fully Local"></h3>
+          <p class="text-slate-600" data-zh="所有 OCR、索引、搜索均在本地完成，数据不会上传任何服务器，隐私安全有保障。" data-en="All OCR, indexing, and search happen locally. Your data never leaves your machine."></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage -->
+  <section id="usage" class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-14" data-zh="使用说明" data-en="How to Use"></h2>
+      <div class="max-w-2xl mx-auto space-y-8">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">1</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1" data-zh="设置扫描目录" data-en="Set Up Scan Folders"></h3>
+            <p class="text-slate-600" data-zh="打开应用，点击设置按钮，添加你需要扫描的文件夹（如 Downloads、Desktop 等），支持递归扫描子目录。" data-en="Open the app, click Settings, then add the folders you want to scan (e.g. Downloads, Desktop). Subfolder recursion is supported."></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">2</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1" data-zh="执行首次扫描" data-en="Run First Scan"></h3>
+            <p class="text-slate-600" data-zh="保存设置后，iSearch 会自动开始对目录中的图片进行 OCR 识别并建立本地索引。首次扫描时间取决于图片数量。" data-en="After saving settings, iSearch automatically starts OCR indexing of your images. The first scan duration depends on the number of images."></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">3</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1" data-zh="快捷键唤起搜索框" data-en="Open with Shortcut"></h3>
+            <p class="text-slate-600" data-zh="按下全局快捷键（默认 Shift + Space），类 Alfred 的搜索框会从屏幕顶部弹出。" data-en="Press the global shortcut (default: Shift + Space) to open the Alfred-style search bar at the top of your screen."></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">4</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1" data-zh="输入关键词，点击结果" data-en="Search and Click Results"></h3>
+            <p class="text-slate-600" data-zh="输入关键词后实时返回结果，点击任意条目即可预览原图或在 Finder 中定位文件。" data-en="Type a keyword to see results instantly. Click any entry to preview the image or locate it in Finder."></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-zh="下载" data-en="Download"></h2>
+      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="选择与你的 Mac 芯片架构对应的版本。如果不确定，可以两个都试试。" data-en="Choose the version that matches your Mac's chip. If you're unsure, either should work."></p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#"
+           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3 rounded-lg transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+          <span data-zh="Apple Silicon (M1/M2/M3/M4)" data-en="Apple Silicon (M1/M2/M3/M4)"></span>
+        </a>
+        <a href="#"
+           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3 rounded-lg transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+          <span data-zh="Intel (x86_64)" data-en="Intel (x86_64)"></span>
+        </a>
+      </div>
+      <p class="text-sm text-slate-400 mt-6">
+        <span data-zh="macOS 12+ &middot; 所有数据本地存储 &middot; 无需网络" data-en="macOS 12+ &middot; All data stored locally &middot; No network required"></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback" class="py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-zh="用户反馈" data-en="Feedback"></h2>
+      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="如果你有建议或遇到了问题，欢迎在 GitHub Issues 中反馈。" data-en="Have suggestions or ran into an issue? Feel free to report on GitHub Issues."></p>
+      <a href="#"
+         class="inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3 rounded-lg transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        <span data-zh="在 GitHub 反馈" data-en="Report on GitHub"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 text-center text-sm text-slate-400">
+      &copy; 2026 iSearch. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // i18n: switch between zh and en by setting data-i18n attribute on <html>
+    let currentLang = 'zh';
+
+    function applyLang() {
+      const html = document.documentElement;
+      html.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
+      document.querySelectorAll('[data-zh][data-en]').forEach(function (el) {
+        el.innerHTML = el.getAttribute('data-' + currentLang);
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      currentLang = currentLang === 'zh' ? 'en' : 'zh';
+      applyLang();
+    });
+
+    // Apply on load
+    applyLang();
+  </script>
+
+</body>
+</html>
