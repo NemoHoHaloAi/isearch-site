@@ -78,32 +78,48 @@
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-14" data-zh="使用说明" data-en="How to Use"></h2>
       <div class="max-w-2xl mx-auto space-y-8">
+        <!-- Gatekeeper notice (prominent) -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-400 text-white flex items-center justify-center font-semibold text-sm">!</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-amber-800" data-zh="首次安装必读：解决「已损坏」提示" data-en="First-time Install: Fix &quot;Already Damaged&quot; Prompt"></h3>
+            <p class="text-slate-600 mb-3" data-zh="由于 iSearch 尚未经过 Apple 官方签名和公证，macOS 会在第一次打开时弹出「文件已损坏」的警告。这是 macOS 安全机制（Gatekeeper）对未签名应用的统一拦截，与应用本身是否损坏无关。" data-en="Since iSearch has not yet been signed and notarized by Apple, macOS will show an &quot;already damaged&quot; warning on first launch. This is macOS Gatekeeper blocking unsigned apps — the app itself is not damaged."></p>
+            <div class="bg-slate-900 rounded-lg p-3 font-mono text-sm text-green-400 mb-2">
+              <span data-zh="sudo xattr -rd com.apple.quarantine /Applications/iSearch.app" data-en="sudo xattr -rd com.apple.quarantine /Applications/iSearch.app"></span>
+            </div>
+            <p class="text-sm text-slate-500" data-zh="打开「终端」粘贴执行，输入密码后回车即可。完成后即可正常双击打开。" data-en="Open Terminal, paste this command, and enter your password when prompted. After that, you can launch normally."></p>
+          </div>
+        </div>
+        <!-- Step 1: Install -->
         <div class="flex gap-4">
           <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">1</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="设置扫描目录" data-en="Set Up Scan Folders"></h3>
-            <p class="text-slate-600" data-zh="打开应用，点击设置按钮，添加你需要扫描的文件夹（如 Downloads、Desktop 等），支持递归扫描子目录。" data-en="Open the app, click Settings, then add the folders you want to scan (e.g. Downloads, Desktop). Subfolder recursion is supported."></p>
+            <h3 class="text-lg font-semibold mb-1" data-zh="下载并安装" data-en="Download and Install"></h3>
+            <p class="text-slate-600" data-zh="下载 DMG 文件后双击打开，将 iSearch.app 拖入 Applications 文件夹。" data-en="Double-click the DMG file, then drag iSearch.app into the Applications folder."></p>
           </div>
         </div>
+        <!-- Step 2: First launch -->
         <div class="flex gap-4">
           <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">2</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="执行首次扫描" data-en="Run First Scan"></h3>
-            <p class="text-slate-600" data-zh="保存设置后，iSearch 会自动开始对目录中的图片进行 OCR 识别并建立本地索引。首次扫描时间取决于图片数量。" data-en="After saving settings, iSearch automatically starts OCR indexing of your images. The first scan duration depends on the number of images."></p>
+            <h3 class="text-lg font-semibold mb-1" data-zh="首次需手动启动一次" data-en="Manually Launch Once"></h3>
+            <p class="text-slate-600" data-zh="安装后首次启动需要手动操作：先执行上方的「解决已损坏提示」命令，然后从 Applications 中双击打开 iSearch。首次启动后，应用会自动注册为开机自启，此后每次开机它将在后台静默运行，无需再次手动打开。" data-en="After installation, the first launch requires a manual action: first run the &quot;fix damaged&quot; command above, then double-click iSearch from Applications. Once launched the first time, the app registers itself for auto-start. From then on, it runs silently in the background on every boot — no need to manually open it again."></p>
           </div>
         </div>
+        <!-- Step 3: Configure scan paths -->
         <div class="flex gap-4">
           <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">3</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="快捷键唤起搜索框" data-en="Open with Shortcut"></h3>
-            <p class="text-slate-600" data-zh="按下全局快捷键（默认 Shift + Space），类 Alfred 的搜索框会从屏幕顶部弹出。" data-en="Press the global shortcut (default: Shift + Space) to open the Alfred-style search bar at the top of your screen."></p>
+            <h3 class="text-lg font-semibold mb-1" data-zh="配置扫描路径并保存" data-en="Configure Scan Paths and Save"></h3>
+            <p class="text-slate-600" data-zh="首次启动后，点击设置图标进入设置面板，添加需要扫描的文件夹（如 Downloads、Desktop 等），支持递归扫描子目录。添加完成后点击「保存」，iSearch 会自动开始首次索引，将图片中的文字提取并存入本地数据库。" data-en="After first launch, click the settings icon to open the settings panel. Add folders you want to scan (e.g. Downloads, Desktop). Subfolder recursion is supported. Click Save, and iSearch will automatically start the initial indexing, extracting text from images and storing them in a local database."></p>
           </div>
         </div>
+        <!-- Step 4: Search -->
         <div class="flex gap-4">
           <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">4</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="输入关键词，点击结果" data-en="Search and Click Results"></h3>
-            <p class="text-slate-600" data-zh="输入关键词后实时返回结果，点击任意条目即可预览原图或在 Finder 中定位文件。" data-en="Type a keyword to see results instantly. Click any entry to preview the image or locate it in Finder."></p>
+            <h3 class="text-lg font-semibold mb-1" data-zh="快捷键唤起搜索" data-en="Search with Keyboard Shortcut"></h3>
+            <p class="text-slate-600" data-zh="按下全局快捷键（默认 Shift + Space），类 Alfred 的搜索框会从屏幕顶部弹出。输入关键词后实时返回结果，点击任意条目即可预览原图或在 Finder 中定位文件。" data-en="Press the global shortcut (default: Shift + Space) to open the Alfred-style search bar. Type a keyword to see results instantly. Click any entry to preview the image or locate it in Finder."></p>
           </div>
         </div>
       </div>
