@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iSearch — 像 Spotlight 一样搜索你忘记的图片</title>
-  <meta name="description" content="iSearch (AI搜图) 是一款 macOS 本地图片搜索工具，通过 OCR 技术让你用关键词快速找回曾经保存但忘记位置的截图、小票、发票等图片。">
+  <meta name="description" content="iSearch (AI搜图) 是一款 macOS / Windows 本地图片搜索工具，通过 OCR 技术让你用关键词快速找回曾经保存但忘记位置的截图、小票、发票等图片。">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -36,7 +36,7 @@
   <section class="hero-gradient min-h-screen flex items-center justify-center pt-14">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6" data-zh="像 Spotlight 一样<br>搜索你忘记的图片" data-en="Search Forgotten Images<br>Like Spotlight"></h1>
-      <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto" data-zh="iSearch 是一款 macOS 本地工具，通过 OCR 索引你电脑中的截图、小票、发票等图片，让你用关键词快速找回它们。" data-en="A native macOS tool that indexes your screenshots, receipts, and invoices with OCR, so you can find them instantly with keywords."></p>
+      <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto" data-zh="iSearch 是一款 macOS / Windows 本地工具，通过 OCR 索引你电脑中的截图、小票、发票等图片，让你用关键词快速找回它们。" data-en="A native macOS & Windows tool that indexes your screenshots, receipts, and invoices with OCR, so you can find them instantly with keywords."></p>
       <a href="#download"
          class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg text-lg transition"
          data-zh="免费下载" data-en="Download Free"></a>
@@ -60,7 +60,7 @@
             <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
           <h3 class="text-lg font-semibold mb-2" data-zh="闪电索引" data-en="Lightning Index"></h3>
-          <p class="text-slate-600" data-zh="基于 macOS Vision Framework 进行 OCR 识别，搜索响应在 1 秒以内，无需等待。" data-en="Powered by macOS Vision Framework for OCR. Search results appear in under 1 second."></p>
+          <p class="text-slate-600" data-zh="macOS 使用 Vision Framework，Windows 使用 Windows.Media.Ocr，搜索响应在 1 秒以内，无需等待。" data-en="macOS uses Vision Framework, Windows uses Windows.Media.Ocr. Search results appear in under 1 second."></p>
         </div>
         <div class="bg-slate-50 rounded-xl p-6">
           <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
@@ -130,22 +130,34 @@
   <section id="download" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6" data-zh="下载" data-en="Download"></h2>
-      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="选择与你的 Mac 芯片架构对应的版本。如果不确定，可以两个都试试。" data-en="Choose the version that matches your Mac's chip. If you're unsure, either should work."></p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://github.com/NemoHoHaloAi/isearch-site/releases/download/v0.1.0/iSearch_0.1.0_aarch64.dmg"
+      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="选择你的操作系统和对应的版本。" data-en="Choose your operating system and download the right version."></p>
+
+      <!-- macOS -->
+      <h3 class="text-xl font-semibold mb-4 flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        <span data-zh="macOS" data-en="macOS"></span>
+      </h3>
+      <p class="text-sm text-slate-500 mb-4" data-zh="Universal 二进制，兼容 Intel 和 Apple Silicon。需要 macOS 12+。首次打开需执行终端命令解除 Gatekeeper 拦截（见使用说明）。" data-en="Universal binary compatible with Intel &amp; Apple Silicon. Requires macOS 12+. First launch requires a terminal command to bypass Gatekeeper (see instructions above)."></p>
+      <div class="flex justify-center mb-12">
+        <a href="https://github.com/NemoHoHaloAi/isearch-site/releases/download/v0.1.1/iSearch_0.1.1_universal.dmg"
            class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3 rounded-lg transition">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-          <span data-zh="Apple Silicon (M1/M2/M3/M4)" data-en="Apple Silicon (M1/M2/M3/M4)"></span>
-        </a>
-        <a href="https://github.com/NemoHoHaloAi/isearch-site/releases/download/v0.1.0/iSearch_0.1.0_x64.dmg"
-           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3 rounded-lg transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-          <span data-zh="Intel (x86_64)" data-en="Intel (x86_64)"></span>
+          <span data-zh="下载 macOS（Universal）" data-en="Download macOS (Universal)"></span>
         </a>
       </div>
-      <p class="text-sm text-slate-400 mt-6">
-        <span data-zh="macOS 12+ &middot; 所有数据本地存储 &middot; 无需网络" data-en="macOS 12+ &middot; All data stored locally &middot; No network required"></span>
-      </p>
+
+      <!-- Windows -->
+      <h3 class="text-xl font-semibold mb-4 flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        <span data-zh="Windows" data-en="Windows"></span>
+      </h3>
+      <p class="text-sm text-slate-500 mb-4" data-zh="需要 Windows 10+。" data-en="Requires Windows 10+."></p>
+      <div class="flex justify-center items-center gap-2">
+        <span class="inline-flex items-center gap-2 bg-slate-200 text-slate-500 font-medium px-8 py-3 rounded-lg cursor-not-allowed">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+          <span data-zh="开发中" data-en="Coming Soon"></span>
+        </span>
+      </div>
     </div>
   </section>
 
