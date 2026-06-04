@@ -20,10 +20,9 @@
     <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
       <span class="text-white font-semibold text-lg">iSearch</span>
       <div class="flex items-center gap-6 text-sm text-slate-300">
-        <a href="#intro" data-zh="介绍" data-en="Features" class="hover:text-white transition"></a>
         <a href="#usage" data-zh="使用说明" data-en="Guide" class="hover:text-white transition"></a>
         <a href="#download" data-zh="下载" data-en="Download" class="hover:text-white transition"></a>
-        <a href="#feedback" data-zh="反馈" data-en="Feedback" class="hover:text-white transition"></a>
+        <a href="https://github.com/NemoHoHaloAi/isearch-site/issues" target="_blank" data-zh="反馈问题" data-en="Report Issue" class="hover:text-white transition"></a>
         <!-- Language toggle -->
         <button id="lang-toggle" class="ml-2 px-2 py-1 rounded text-xs font-medium border border-slate-600 hover:border-slate-400 transition">
           <span data-zh="EN" data-en="中文"></span>
@@ -33,93 +32,84 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero-gradient min-h-screen flex items-center justify-center pt-14">
-    <div class="max-w-3xl mx-auto px-6 text-center">
+  <section class="hero-gradient min-h-[70vh] flex items-center justify-center pt-14 pb-12">
+    <div class="max-w-5xl mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6" data-zh="像 Spotlight 一样<br>搜索你忘记的图片" data-en="Search Forgotten Images<br>Like Spotlight"></h1>
-      <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto" data-zh="iSearch 是一款 macOS / Windows 本地工具，通过 OCR 索引你电脑中的截图、小票、发票等图片，让你用关键词快速找回它们。" data-en="A native macOS & Windows tool that indexes your screenshots, receipts, and invoices with OCR, so you can find them instantly with keywords."></p>
+      <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-xl mx-auto" data-zh="iSearch 是一款 macOS / Windows 本地工具，通过 OCR 索引你电脑中的截图、小票、发票等图片，让你用关键词快速找回它们。" data-en="A native macOS & Windows tool that indexes your screenshots, receipts, and invoices with OCR, so you can find them instantly with keywords."></p>
       <a href="#download"
-         class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg text-lg transition"
+         class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg text-lg transition mb-12"
          data-zh="免费下载" data-en="Download Free"></a>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section id="intro" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-14" data-zh="它能做什么？" data-en="What Can It Do?"></h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-50 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <!-- Features -->
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2" data-zh="关键词搜索" data-en="Keyword Search"></h3>
-          <p class="text-slate-600" data-zh="输入商户名、地点、金额等关键词，即可搜索到你电脑中的截图、小票、发票等图片内容。" data-en="Enter merchant names, locations, amounts or any keyword to search through your screenshots, receipts, and invoices."></p>
+          <h3 class="text-base font-semibold text-white mb-1" data-zh="关键词搜索" data-en="Keyword Search"></h3>
+          <p class="text-sm text-slate-400" data-zh="输入商户名、地点、金额等关键词，即可搜索到你电脑中的截图、小票、发票等图片内容。" data-en="Enter merchant names, locations, amounts or any keyword to search through your screenshots, receipts, and invoices."></p>
         </div>
-        <div class="bg-slate-50 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2" data-zh="闪电索引" data-en="Lightning Index"></h3>
-          <p class="text-slate-600" data-zh="macOS 使用 Vision Framework，Windows 使用 Windows.Media.Ocr，搜索响应在 1 秒以内，无需等待。" data-en="macOS uses Vision Framework, Windows uses Windows.Media.Ocr. Search results appear in under 1 second."></p>
+          <h3 class="text-base font-semibold text-white mb-1" data-zh="闪电索引" data-en="Lightning Index"></h3>
+          <p class="text-sm text-slate-400" data-zh="macOS 使用 Vision Framework，Windows 使用 Windows.Media.Ocr，搜索响应在 1 秒以内，无需等待。" data-en="macOS uses Vision Framework, Windows uses Windows.Media.Ocr. Search results appear in under 1 second."></p>
         </div>
-        <div class="bg-slate-50 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2" data-zh="完全本地" data-en="Fully Local"></h3>
-          <p class="text-slate-600" data-zh="所有 OCR、索引、搜索均在本地完成，数据不会上传任何服务器，隐私安全有保障。" data-en="All OCR, indexing, and search happen locally. Your data never leaves your machine."></p>
+          <h3 class="text-base font-semibold text-white mb-1" data-zh="完全本地" data-en="Fully Local"></h3>
+          <p class="text-sm text-slate-400" data-zh="所有 OCR、索引、搜索均在本地完成，数据不会上传任何服务器，隐私安全有保障。" data-en="All OCR, indexing, and search happen locally. Your data never leaves your machine."></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Usage -->
-  <section id="usage" class="py-20">
+  <section id="usage" class="py-12">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-14" data-zh="使用说明" data-en="How to Use"></h2>
-      <div class="max-w-2xl mx-auto space-y-8">
-        <!-- Gatekeeper notice (prominent) -->
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 flex gap-4">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-400 text-white flex items-center justify-center font-semibold text-sm">!</div>
+      <h2 class="text-3xl font-bold text-center mb-8" data-zh="使用说明" data-en="How to Use"></h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- Gatekeeper notice -->
+        <div class="md:col-span-2 bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+          <div class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-400 text-white flex items-center justify-center font-semibold text-sm">!</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1 text-amber-800" data-zh="首次安装必读：解决「已损坏」提示" data-en="First-time Install: Fix &quot;Already Damaged&quot; Prompt"></h3>
-            <p class="text-slate-600 mb-3" data-zh="由于 iSearch 尚未经过 Apple 官方签名和公证，macOS 会在第一次打开时弹出「文件已损坏」的警告。这是 macOS 安全机制（Gatekeeper）对未签名应用的统一拦截，与应用本身是否损坏无关。" data-en="Since iSearch has not yet been signed and notarized by Apple, macOS will show an &quot;already damaged&quot; warning on first launch. This is macOS Gatekeeper blocking unsigned apps — the app itself is not damaged."></p>
-            <div class="bg-slate-900 rounded-lg p-3 font-mono text-sm text-green-400 mb-2">
-              <span data-zh="sudo xattr -rd com.apple.quarantine /Applications/iSearch.app" data-en="sudo xattr -rd com.apple.quarantine /Applications/iSearch.app"></span>
-            </div>
-            <p class="text-sm text-slate-500" data-zh="打开「终端」粘贴执行，输入密码后回车即可。完成后即可正常双击打开。" data-en="Open Terminal, paste this command, and enter your password when prompted. After that, you can launch normally."></p>
+            <h3 class="font-semibold text-amber-800" data-zh="首次安装必读：解决「已损坏」提示" data-en="First-time Install: Fix &quot;Damaged&quot; Prompt"></h3>
+            <p class="text-sm text-slate-600 mb-2" data-zh="macOS Gatekeeper 会拦截未签名应用（非应用损坏），需在终端执行：" data-en="macOS Gatekeeper blocks unsigned apps. Run in Terminal:"></p>
+            <code class="bg-slate-900 rounded px-2 py-1 text-xs text-green-400 font-mono">sudo xattr -rd com.apple.quarantine /Applications/iSearch.app</code>
           </div>
         </div>
-        <!-- Step 1: Install -->
-        <div class="flex gap-4">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">1</div>
+        <!-- Step 1 -->
+        <div class="bg-white rounded-xl p-4 border border-slate-200 flex gap-3">
+          <div class="flex-shrink-0 w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">1</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="下载并安装" data-en="Download and Install"></h3>
-            <p class="text-slate-600" data-zh="下载 DMG 文件后双击打开，将 iSearch.app 拖入 Applications 文件夹。" data-en="Double-click the DMG file, then drag iSearch.app into the Applications folder."></p>
+            <h3 class="font-semibold mb-1" data-zh="下载并安装" data-en="Download and Install"></h3>
+            <p class="text-sm text-slate-600" data-zh="下载 DMG，将 iSearch.app 拖入 Applications 文件夹。" data-en="Double-click the DMG, drag iSearch.app into Applications."></p>
           </div>
         </div>
-        <!-- Step 2: First launch -->
-        <div class="flex gap-4">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">2</div>
+        <!-- Step 2 -->
+        <div class="bg-white rounded-xl p-4 border border-slate-200 flex gap-3">
+          <div class="flex-shrink-0 w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">2</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="首次需手动启动一次" data-en="Manually Launch Once"></h3>
-            <p class="text-slate-600" data-zh="安装后首次启动需要手动操作：先执行上方的「解决已损坏提示」命令，然后从 Applications 中双击打开 iSearch。首次启动后，应用会自动注册为开机自启，此后每次开机它将在后台静默运行，无需再次手动打开。" data-en="After installation, the first launch requires a manual action: first run the &quot;fix damaged&quot; command above, then double-click iSearch from Applications. Once launched the first time, the app registers itself for auto-start. From then on, it runs silently in the background on every boot — no need to manually open it again."></p>
+            <h3 class="font-semibold mb-1" data-zh="首次需手动启动" data-en="Manually Launch Once"></h3>
+            <p class="text-sm text-slate-600" data-zh="先执行上方解除 Gatekeeper 命令，再双击打开。之后会自动注册为开机自启。" data-en="Run the Gatekeeper command above, then double-click. It will auto-register for boot start."></p>
           </div>
         </div>
-        <!-- Step 3: Configure scan paths -->
-        <div class="flex gap-4">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">3</div>
+        <!-- Step 3 -->
+        <div class="bg-white rounded-xl p-4 border border-slate-200 flex gap-3">
+          <div class="flex-shrink-0 w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">3</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="配置扫描路径并保存" data-en="Configure Scan Paths and Save"></h3>
-            <p class="text-slate-600" data-zh="首次启动后，点击设置图标进入设置面板，添加需要扫描的文件夹（如 Downloads、Desktop 等），支持递归扫描子目录。添加完成后点击「保存」，iSearch 会自动开始首次索引，将图片中的文字提取并存入本地数据库。" data-en="After first launch, click the settings icon to open the settings panel. Add folders you want to scan (e.g. Downloads, Desktop). Subfolder recursion is supported. Click Save, and iSearch will automatically start the initial indexing, extracting text from images and storing them in a local database."></p>
+            <h3 class="font-semibold mb-1" data-zh="配置扫描路径" data-en="Configure Scan Paths"></h3>
+            <p class="text-sm text-slate-600" data-zh="点击设置图标，添加要扫描的文件夹（Downloads、Desktop 等），保存后自动索引。" data-en="Click settings icon, add folders to scan (Downloads, Desktop, etc.), then save to auto-index."></p>
           </div>
         </div>
-        <!-- Step 4: Search -->
-        <div class="flex gap-4">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">4</div>
+        <!-- Step 4 -->
+        <div class="bg-white rounded-xl p-4 border border-slate-200 flex gap-3">
+          <div class="flex-shrink-0 w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-sm">4</div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" data-zh="快捷键唤起搜索" data-en="Search with Keyboard Shortcut"></h3>
-            <p class="text-slate-600" data-zh="按下全局快捷键（默认 Shift + Space），类 Alfred 的搜索框会从屏幕顶部弹出。输入关键词后实时返回结果，点击任意条目即可预览原图或在 Finder 中定位文件。" data-en="Press the global shortcut (default: Shift + Space) to open the Alfred-style search bar. Type a keyword to see results instantly. Click any entry to preview the image or locate it in Finder."></p>
+            <h3 class="font-semibold mb-1" data-zh="快捷键唤起搜索" data-en="Search with Shortcut"></h3>
+            <p class="text-sm text-slate-600" data-zh="按全局快捷键（默认 Shift+Space）唤出搜索框，输入关键词实时搜索。" data-en="Press global shortcut (Shift+Space) to open search bar, type keywords for instant results."></p>
           </div>
         </div>
       </div>
@@ -127,50 +117,36 @@
   </section>
 
   <!-- Download -->
-  <section id="download" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6" data-zh="下载" data-en="Download"></h2>
-      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="选择你的操作系统和对应的版本。" data-en="Choose your operating system and download the right version."></p>
-
-      <!-- macOS -->
-      <h3 class="text-xl font-semibold mb-4 flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-        <span data-zh="macOS" data-en="macOS"></span>
-      </h3>
-      <p class="text-sm text-slate-500 mb-4" data-zh="Universal 二进制，兼容 Intel 和 Apple Silicon。需要 macOS 12+。首次打开需执行终端命令解除 Gatekeeper 拦截（见使用说明）。" data-en="Universal binary compatible with Intel &amp; Apple Silicon. Requires macOS 12+. First launch requires a terminal command to bypass Gatekeeper (see instructions above)."></p>
-      <div class="flex justify-center mb-12">
-        <a href="https://github.com/NemoHoHaloAi/isearch-site/releases/download/v0.1.1/iSearch_0.1.1_universal.dmg"
-           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3 rounded-lg transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-          <span data-zh="下载 macOS（Universal）" data-en="Download macOS (Universal)"></span>
-        </a>
+  <section id="download" class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8" data-zh="下载" data-en="Download"></h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- macOS -->
+        <div class="bg-slate-50 rounded-xl p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            <span data-zh="macOS" data-en="macOS"></span>
+          </h3>
+          <p class="text-sm text-slate-500 mb-4" data-zh="Universal 二进制，兼容 Intel 和 Apple Silicon。需要 macOS 12+。" data-en="Universal binary, Intel &amp; Apple Silicon. Requires macOS 12+."></p>
+          <a href="https://github.com/NemoHoHaloAi/isearch-site/releases/download/v0.1.1/iSearch_0.1.1_universal.dmg"
+             class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-2.5 rounded-lg transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09 21.99C7.78 22.03 6.79 20.63 5.95 19.39C4.26 16.94 2.93 12.35 4.7 9.28C5.57 7.77 7.13 6.81 8.82 6.78C10.1 6.76 11.32 7.66 12.1 7.66C12.89 7.66 14.37 6.6 15.94 6.78C17.5 6.95 18.58 7.53 19.26 8.52C17.6 9.53 17.09 11.52 17.86 13.05C18.63 14.58 19.83 15.68 21.19 15.66C21.73 15.66 22.13 15.31 22.55 15.13C22.02 15.78 21.58 16.5 21.14 17.16L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.6C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            <span data-zh="下载 macOS" data-en="Download macOS"></span>
+          </a>
+        </div>
+        <!-- Windows -->
+        <div class="bg-slate-50 rounded-xl p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            <span data-zh="Windows" data-en="Windows"></span>
+          </h3>
+          <p class="text-sm text-slate-500 mb-4" data-zh="需要 Windows 10+。" data-en="Requires Windows 10+."></p>
+          <span class="inline-flex items-center gap-2 bg-slate-200 text-slate-500 font-medium px-6 py-2.5 rounded-lg cursor-not-allowed">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            <span data-zh="开发中" data-en="Coming Soon"></span>
+          </span>
+        </div>
       </div>
-
-      <!-- Windows -->
-      <h3 class="text-xl font-semibold mb-4 flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-        <span data-zh="Windows" data-en="Windows"></span>
-      </h3>
-      <p class="text-sm text-slate-500 mb-4" data-zh="需要 Windows 10+。" data-en="Requires Windows 10+."></p>
-      <div class="flex justify-center items-center gap-2">
-        <span class="inline-flex items-center gap-2 bg-slate-200 text-slate-500 font-medium px-8 py-3 rounded-lg cursor-not-allowed">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-          <span data-zh="开发中" data-en="Coming Soon"></span>
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feedback -->
-  <section id="feedback" class="py-20">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6" data-zh="用户反馈" data-en="Feedback"></h2>
-      <p class="text-slate-600 mb-10 max-w-lg mx-auto" data-zh="如果你有建议或遇到了问题，欢迎在 GitHub Issues 中反馈。" data-en="Have suggestions or ran into an issue? Feel free to report on GitHub Issues."></p>
-      <a href="https://github.com/NemoHoHaloAi/isearch-site/issues"
-         class="inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3 rounded-lg transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        <span data-zh="在 GitHub 反馈" data-en="Report on GitHub"></span>
-      </a>
     </div>
   </section>
 
